@@ -10,7 +10,7 @@
         height: 100%;
         width: 80px;
         padding: 10px;
-        padding-left: 75px;
+        padding-left: 40px;
 
         .logo {
             height: 90px;
@@ -24,7 +24,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-right: 70px;
+        padding-right: 40px;
   
       .option {
             padding: 20px 15px;
@@ -36,20 +36,20 @@
 @media (max-width: 600px) {
   .header {
     flex-direction: column;
-    height: 160px;
-    justify-content: flex-baseline;
+    height: 180px;
+    justify-content: baseline;
 
     .logo-container {
       text-align: center;
       align-items: stretch;
       padding-bottom: 0px;
-      padding-left: 130px;
     }
 
     .logo {
       height: 40px;
       width: 150px;
       text-align: center;
+      padding-left: 40%;
     }
 
     .navbar-options {
