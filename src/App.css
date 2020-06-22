@@ -1,4 +1,15 @@
 body {
     font-family: 'Fira Sans Condensed', sans-serif;
-    padding: 20px 60px;
+    padding: 20px 40px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #7E8F7A;
+}
+
+a:hover {
+    cursor: pointer;
+    color: #7E8F7A;
 }
