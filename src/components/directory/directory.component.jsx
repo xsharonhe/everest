@@ -18,7 +18,7 @@ class Directory extends React.Component {
                   title: 'trackers',
                   imageURL: 'https://images.pexels.com/photos/9051/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
                   id: 2,
-                  linkURL: 'shop/smartwatches'
+                  linkURL: 'shop/trackers'
                 },
                 {
                   title: 'equipment',
