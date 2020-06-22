@@ -25,7 +25,7 @@
     }
     &.large {
       height: 400px;
-      width: 500px;
+      width: 250px;
     }
 
     &:first-child {
@@ -73,8 +73,20 @@
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
       .menu-item {
           height: 400px;
+      }
+      
+      .layout {
+        width: 100px;
+      }
+
+      .title {
+        font-size: 20px;
+      }
+
+      .caption {
+        font-size: 15px;
       }
   }
