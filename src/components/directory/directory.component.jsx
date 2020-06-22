@@ -10,32 +10,32 @@ class Directory extends React.Component {
             sections: [
                 {
                   title: 'bands',
-                  image: 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2702&q=80',
+                  imageURL: 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2702&q=80',
                   id: 1,
                   linkURL: 'shop/bands'
                 },
                 {
-                  title: 'smartwatches',
-                  imageURL: 'https://i.ibb.co/px2tCc3/jackets.png',
+                  title: 'trackers',
+                  imageURL: 'https://images.pexels.com/photos/9051/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
                   id: 2,
                   linkURL: 'shop/smartwatches'
                 },
                 {
                   title: 'equipment',
-                  imageURL: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+                  imageURL: 'https://images.unsplash.com/photo-1493690283958-32df2c86326e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1948&q=80',
                   id: 3,
                   linkURL: 'shop/equipment'
                 },
                 {
-                  title: 'accessories',
-                  imageURL: 'https://i.ibb.co/GCCdy8t/womens.png',
+                  title: 'sports',
+                  imageURL: 'https://images.unsplash.com/photo-1574379989050-bfd9e1a8a543?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
                   size: 'large',
                   id: 4,
-                  linkURL: 'shop/accessories'
+                  linkURL: 'shop/sports'
                 },
                 {
                   title: 'apparel',
-                  imageURL: 'https://i.ibb.co/R70vBrQ/men.png',
+                  imageURL: 'https://images.pexels.com/photos/936094/pexels-photo-936094.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
                   size: 'large',
                   id: 5,
                   linkURL: 'shop/apparel'
@@ -49,8 +49,8 @@ class Directory extends React.Component {
       return (
         <div className='menu-directory'>
           {
-            this.state.sections.map(({ title, imageURL, id}) => (
-            <MenuItem key={ id } title = { title }/>
+            this.state.sections.map(({ title, imageURL, id, size }) => (
+            <MenuItem key={ id } title={ title } imageURL= { imageURL} size = { size } />
             )) 
           }
         </div>
