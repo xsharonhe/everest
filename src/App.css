@@ -13,3 +13,7 @@ a:hover {
     cursor: pointer;
     color: #7E8F7A;
 }
+
+* {
+    box-sizing: border-box;
+}
