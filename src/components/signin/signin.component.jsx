@@ -43,7 +43,7 @@ class SignIn extends React.Component {
                         required/>
                     <FormLayout name='password' 
                         type="password" 
-                        value={ this.state.email }
+                        value={ this.state.password }
                         label="password"
                         handleChange={ this.handleChange } 
                         required/>    
