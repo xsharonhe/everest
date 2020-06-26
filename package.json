@@ -17,6 +17,7 @@
     "react-scripts": "^3.4.1",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
+    "reselect": "^4.0.0",
     "sass-loader": "^8.0.2",
     "save": "^2.4.0",
     "style-loader": "^1.2.1"
