@@ -25,7 +25,7 @@
 
     &.large {
       height: 400px;
-      width: 250px;
+      width: 300px;
     }
 
     &:first-child {
@@ -47,7 +47,7 @@
     .layout {
       position: absolute;
       height: 100px;
-      width: 120px;
+      width: 150px;
       padding: 0 25px;
       display: flex;
       flex-direction: column;
