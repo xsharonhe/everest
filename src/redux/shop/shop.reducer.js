@@ -1,4 +1,4 @@
-import SHOP_CONSTANT from '../../pages/shop/shop.constant'
+import SHOP_CONSTANT from './shop.constants'
 
 const INITIAL_STATE = {
   collections: SHOP_CONSTANT
