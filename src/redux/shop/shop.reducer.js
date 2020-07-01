@@ -1,7 +1,7 @@
-import SHOP_DATA from '../../pages/shop/shop.constant'
+import SHOP_CONSTANT from '../../pages/shop/shop.constant'
 
 const INITIAL_STATE = {
-  collections: SHOP_DATA
+  collections: SHOP_CONSTANT
 };
 
 const shopReducer = (state = INITIAL_STATE, action) => {
