@@ -1,5 +1,5 @@
-const SHOP_CONSTANTS = [
-    {
+const SHOP_CONSTANTS = {
+    bands: {
       id: 1,
       title: 'Bands',
       routeName: 'bands',
@@ -60,7 +60,7 @@ const SHOP_CONSTANTS = [
         }
       ]
     },
-    {
+    trackers: {
       id: 2,
       title: 'Trackers',
       routeName: 'trackers',
@@ -115,7 +115,7 @@ const SHOP_CONSTANTS = [
         }
       ]
     },
-    {
+    equipment: {
       id: 3,
       title: 'Equipment',
       routeName: 'equipment',
@@ -152,7 +152,7 @@ const SHOP_CONSTANTS = [
         }
       ]
     },
-    {
+    sports: {
       id: 4,
       title: 'Sports',
       routeName: 'sports',
@@ -201,7 +201,7 @@ const SHOP_CONSTANTS = [
         }
       ]
     },
-    {
+    apparel: {
       id: 5,
       title: 'Apparel',
       routeName: 'apparel',
@@ -244,6 +244,6 @@ const SHOP_CONSTANTS = [
         }
       ]
     }
-  ]
+}
 
 export default SHOP_CONSTANTS;
