@@ -5,7 +5,7 @@ const SHOP_CONSTANTS = [
       routeName: 'bands',
       items: [
         {
-          id: 1,
+          id: 1, 
           name: 'Elastic Orange',
           imageURL: 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2702&q=80',
           price: 15
