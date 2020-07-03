@@ -85,7 +85,3 @@ export const OptionsContainer = styled.div`
 export const OptionsLink = styled(Link)`
     ${OptionContainerStyles}
 `
-
-export const OptionsDiv = styled.div`
-    ${OptionContainerStyles}
-`
