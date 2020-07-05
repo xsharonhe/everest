@@ -15,7 +15,7 @@ const SHOP_CONSTANTS = {
             name: 'Elastic Blue',
             imageURL: 'https://images.pexels.com/photos/2417486/pexels-photo-2417486.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
             price: 15
-          },
+        },
         {
           id: 3,
           name: 'PullUp Set',
@@ -134,7 +134,7 @@ const SHOP_CONSTANTS = {
         },
         {
           id: 20,
-          name: 'OldSchool Dumbell Set',
+          name: 'Old School Dumbell Set',
           imageURL: 'https://images.unsplash.com/photo-1493690283958-32df2c86326e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1948&q=80',
           price: 110
         },

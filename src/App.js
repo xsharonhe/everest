@@ -8,6 +8,7 @@ import ShopPage from './pages/shop/shop.component'
 import LoginPage from './pages/login/login.component'
 import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 import CheckoutPage from './pages/checkout/checkout.component'
+import SuccessPage from './pages/success/success.component'
 import './App.css'
 
 import { setCurrentUser } from './redux/user/user.actions'
@@ -48,6 +49,7 @@ class App extends React.Component {
           <Route exact path='/' component={ Home }/>
           <Route path='/shop' component={ ShopPage }/>
           <Route exact path='/checkout' component={ CheckoutPage }/>
+          <Route exact path='/checkout/paymentconfirmed' component={ SuccessPage }/>
           <Route exact path='/signin' render={() => 
             this.props.currentUser ? (<Redirect to='/'/>) : (<LoginPage />)}/>
         </Switch>

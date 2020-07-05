@@ -5,15 +5,13 @@ import StripeCheckout from 'react-stripe-checkout'
 import { withRouter } from 'react-router-dom';
 
 import { removeAllItems } from '../../redux/cart/cart.actions'
-import Logo from '../../assets/logo.svg'
 
 const StripeCheckoutButton = ({ price, history, dispatch }) => {
     const priceForStripe = price * 100
     const publishableKey = 'pk_test_51H0Zt7Hagg9Xnev16tP9n0FjVh6emtjX52zfaQJGKpKh8RgnWzIktM41NF4JHR1cFHPCQiztvpGXArXkoZlqK45t00BSAGlS6v'
     const onToken = token => {
         console.log(token)
-        alert('Payment successful')
-        history.push('/');
+        history.push('/checkout/paymentconfirmed')
         dispatch(removeAllItems())
     }
 
@@ -23,7 +21,7 @@ const StripeCheckoutButton = ({ price, history, dispatch }) => {
             name='everest'
             billingAddress
             shippingAddress
-            image={ Logo }
+            image='http://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80'
             description={`Your total is $${ price }.`}
             amount={ priceForStripe }
             panelLabel='Pay Now'
