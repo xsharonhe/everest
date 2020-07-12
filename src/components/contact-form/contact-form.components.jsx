@@ -3,7 +3,7 @@ import React from 'react';
 import FormLayout from '../../pages/form-layout/form-layout.component'
 import CustomButton from '../button/button.component'
 import { withRouter } from 'react-router-dom';
-import { auth } from '../../firebase/firebase.utils'
+import { createSubscriptionPage } from '../../firebase/firebase.utils'
 
 import './contact-form.styles.scss'
 
@@ -12,6 +12,7 @@ class ContactForm extends React.Component {
         super(props);
 
         this.state = {
+            displayName: '',
             email: '',
             password: ''
         }
@@ -19,18 +20,16 @@ class ContactForm extends React.Component {
     
     handleSubmit = async event => {
         event.preventDefault();
-
-        const { email, password } = this.state;
-
-        try {
-            await auth.signInWithEmailAndPassword(email, password)
-            this.setState({ email: '' })
-        } catch(error) {
-            console.log(error)
-        }
-
-        this.setState( { email: '', password: ''} )
-    }
+    
+        const { displayName, email } = this.state;
+    
+          await createSubscriptionPage(displayName, email);
+    
+          this.setState({
+            displayName: '',
+            email: ''
+          });
+      };
 
     handleChange = event => {
         const { value, name } = event.target;
@@ -47,20 +46,20 @@ class ContactForm extends React.Component {
                 <span> Sign up with your name and email. </span>
 
                 <form onSubmit={ this.handleSubmit }>
+                    <FormLayout name="displayName" 
+                        type="text" 
+                        value={ this.state.displayName } 
+                        label="name"
+                        handleChange={ this.handleChange }
+                        required/>
                     <FormLayout name="email" 
                         type="email" 
                         value={ this.state.email } 
                         label="email"
                         handleChange={ this.handleChange }
-                        required/>
-                    <FormLayout name='password' 
-                        type="password" 
-                        value={ this.state.password }
-                        label="password"
-                        handleChange={ this.handleChange } 
-                        required/>    
+                        required/> 
                     <div className='buttons'>
-                        <CustomButton type='submit' value='Submit Form' onClick={() => {
+                        <CustomButton type='submit' value='Submit-Form' onClick={() => {
                             history.push('/thankyou')
                         }}> Submit Form </CustomButton>
                     </div>         
