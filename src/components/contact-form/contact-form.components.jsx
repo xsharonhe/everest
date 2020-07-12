@@ -2,7 +2,7 @@ import React from 'react';
 
 import FormLayout from '../../pages/form-layout/form-layout.component'
 import CustomButton from '../button/button.component'
-import { auth, signInWithGoogle } from '../../firebase/firebase.utils'
+import { auth } from '../../firebase/firebase.utils'
 
 import './contact-form.styles.scss'
 
@@ -39,11 +39,12 @@ class ContactForm extends React.Component {
 
     render () {
         return (
-            <div className='sign-in'> 
-                <h2> I already have an account. </h2>
+            <div className='contact-us'> 
+                <h2> I would love to receive more news and updates! </h2>
                 <span> Sign in with your email and password. </span>
 
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={ this.handleSubmit }>
+                    <FormLayout name="text"/>
                     <FormLayout name="email" 
                         type="email" 
                         value={ this.state.email } 
@@ -57,9 +58,7 @@ class ContactForm extends React.Component {
                         handleChange={ this.handleChange } 
                         required/>    
                     <div className='buttons'>
-                        <CustomButton type='submit' value='Submit Form'> Sign In </CustomButton>
-                        <CustomButton type='button' onClick={ signInWithGoogle } isGoogleSignIn>  
-                            Google Sign In  </CustomButton>
+                        <CustomButton type='submit' value='Submit Form'> Submit Form </CustomButton>
                     </div>         
                 </form> 
             </div>

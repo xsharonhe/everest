@@ -4,7 +4,7 @@ import ContactForm from '../../components/contact-form/contact-form.components'
 import './contact.styles.scss'
 
 const ContactPage = () => (
-    <div>
+    <div className='contact-form'>
         <h1> Contact Us </h1>
         <ContactForm/>
     </div>
