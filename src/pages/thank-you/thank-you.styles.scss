@@ -1,0 +1,21 @@
+.container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    
+    .success {
+        padding: 20px 50px;
+        margin: 30px;
+        text-align: center;
+        background-color: #7E8F7A;
+        color: white;
+    }
+
+    .button {
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;
+    }
+}

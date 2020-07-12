@@ -5,7 +5,6 @@ import './contact.styles.scss'
 
 const ContactPage = () => (
     <div className='contact-form'>
-        <h1> Contact Us </h1>
         <ContactForm/>
     </div>
 )

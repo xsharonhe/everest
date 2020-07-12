@@ -2,6 +2,7 @@ import React from 'react';
 
 import FormLayout from '../../pages/form-layout/form-layout.component'
 import CustomButton from '../button/button.component'
+import { withRouter } from 'react-router-dom';
 import { auth } from '../../firebase/firebase.utils'
 
 import './contact-form.styles.scss'
@@ -38,13 +39,14 @@ class ContactForm extends React.Component {
     }
 
     render () {
+        const { history } = this.props;
         return (
-            <div className='contact-us'> 
+            <div className='contact-us'>
+                <h1> Contact Us </h1> 
                 <h2> I would love to receive more news and updates! </h2>
-                <span> Sign in with your email and password. </span>
+                <span> Sign up with your name and email. </span>
 
                 <form onSubmit={ this.handleSubmit }>
-                    <FormLayout name="text"/>
                     <FormLayout name="email" 
                         type="email" 
                         value={ this.state.email } 
@@ -58,7 +60,9 @@ class ContactForm extends React.Component {
                         handleChange={ this.handleChange } 
                         required/>    
                     <div className='buttons'>
-                        <CustomButton type='submit' value='Submit Form'> Submit Form </CustomButton>
+                        <CustomButton type='submit' value='Submit Form' onClick={() => {
+                            history.push('/thankyou')
+                        }}> Submit Form </CustomButton>
                     </div>         
                 </form> 
             </div>
@@ -67,4 +71,4 @@ class ContactForm extends React.Component {
 
 }
 
-export default ContactForm;
+export default withRouter(ContactForm);
