@@ -19,3 +19,18 @@
         margin: auto;
     }
 }
+
+@media (max-width: 600px) {
+    .container {
+        width: 300px;
+    }
+
+    .button {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .spacer{
+        margin: 10px;
+    }
+}

@@ -15,6 +15,8 @@ const ThanksPage = ({ history }) => (
             <Button onClick={() => {
                 history.push('/')
             }}> Back to Home Page </Button>
+            <div className='spacer'>
+            </div>
             <Button onClick={() => {
                 history.push('/shop')
             }}> Back to Shop Page </Button>
