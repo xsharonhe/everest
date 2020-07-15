@@ -7,6 +7,10 @@ if(process.env.NODE_ENV !== 'production') require('dotenv').config()
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
+const mc_api_key = process.env.MAILCHIMP_API_KEY;
+const list_id = process.env.LIST_ID;
+const mailchimp = new Mailchimp(mc_api_key);
+
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -42,4 +46,16 @@ app.post('/payment', (req, res) => {
             res.status(200).send({ success: stripeRes })
         }
     })
+})
+
+//maillist:
+app.get('/api/memberAdd', (req, res) => {
+    mailchimp
+        .post(`/lists/${list_id}/members`, {
+            email_address: req.query.email,
+            status: "subscribed"
+        })
+        .then(result => {
+            res.send(result);
+        })
 })

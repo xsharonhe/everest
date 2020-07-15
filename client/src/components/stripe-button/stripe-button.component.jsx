@@ -21,8 +21,7 @@ const StripeCheckoutButton = ({ price, history, dispatch }) => {
         }).then(res => {
             history.push('/checkout/paymentconfirmed')
             dispatch(removeAllItems())
-        }).catch(error => {
-            console.log('Payment error: ', JSON.parse(error));
+        }).catch(err => {
             alert('There was an issue with your payment.')
         })
     }
