@@ -1,10 +1,15 @@
 .sign-in {
-    width: 380px;
+    width: 400px;
     display: flex;
     flex-direction: column;
+    padding: 20px 30px 30px 30px;
+    border: 2px solid black;
+    background-color: #f7f7ee;
 
-    .title {
-        margin: 15px 0 10px 0;
+    h2, span {
+        color: black;
+        font-weight: 800px;
+        text-align: center;
     }
 
     .buttons {

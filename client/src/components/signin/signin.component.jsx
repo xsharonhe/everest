@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FormLayout from '../../pages/form-layout/form-layout.component'
-import CustomButton from '../button/button.component'
+import Button from '../button/button.component'
 import { auth, signInWithGoogle } from '../../firebase/firebase.utils'
 
 import './signin.styles.scss'
@@ -57,9 +57,9 @@ class SignIn extends React.Component {
                         handleChange={ this.handleChange } 
                         required/>    
                     <div className='buttons'>
-                        <CustomButton type='submit' value='Submit Form'> Sign In </CustomButton>
-                        <CustomButton type='button' onClick={ signInWithGoogle } isGoogleSignIn>  
-                            Google Sign In  </CustomButton>
+                        <Button type='submit' value='Submit Form'> Sign In </Button>
+                        <Button type='button' onClick={ signInWithGoogle } isGoogleSignIn>  
+                            Google Sign In  </Button>
                     </div>         
                 </form> 
             </div>

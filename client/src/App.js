@@ -11,6 +11,7 @@ import CheckoutPage from './pages/checkout/checkout.component'
 import SuccessPage from './pages/success/success.component'
 import ContactPage from './pages/contact/contact.components'
 import ThanksPage from './pages/thank-you/thank-you.components'
+import SignUpPage from './pages/signup/signup.components'
 import './App.css'
 
 import { setCurrentUser } from './redux/user/user.actions'
@@ -54,9 +55,9 @@ class App extends React.Component {
           <Route exact path='/checkout/paymentconfirmed' component={ SuccessPage }/>
           <Route exact path='/contact' component={ ContactPage }/>
           <Route exact path='/thankyou' component={ ThanksPage }/>
-          <Route exact path='/api/addMember'/>
           <Route exact path='/signin' render={() => 
             this.props.currentUser ? (<Redirect to='/'/>) : (<LoginPage />)}/>
+          <Route exact path='/signup' component={ SignUpPage }/>
         </Switch>
       </div>
     );
