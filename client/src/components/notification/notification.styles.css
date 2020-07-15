@@ -9,7 +9,7 @@
     position: relative;
     transition: .35s;
     transform: translateY(100%);
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .notification.visible {

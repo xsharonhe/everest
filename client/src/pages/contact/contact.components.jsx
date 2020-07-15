@@ -17,7 +17,6 @@ class ContactPage extends React.Component {
             message: '',
             level: '',
             visible: false,
-
         }
     }
 
@@ -42,14 +41,11 @@ class ContactPage extends React.Component {
             notification.message = "Thank you for subscribing to our mailing list. You will be receiving a welcome email shortly."
             setTimeout(() => {
                 history.push('/thankyou')
-            }, 2000)
+                }, 2000)
         } else if (level === 'warning') {
             notification.src = exclamation;
             notification.alt = 'Exclamation Point';
-            notification.message = "The email has already been entered. Thank you for being apart of our community."
-            setTimeout(() => {
-                notification.visible = false;
-            }, 5000)
+            notification.message = "The email has already been entered. Thank you for being apart of our community!"
         } else {
             notification.src = x;
             notification.alt = 'X';
@@ -66,8 +62,7 @@ class ContactPage extends React.Component {
                     configureNotification={ this.configureNotification }/>
                 <Description src={ notification.src }
                     alt={ notification.alt } message={ notification.message }
-                    level={ notification.level } visible={ notification.visible }
-                    />
+                    level={ notification.level } visible={ notification.visible }/>
             </div>
         )
     }
