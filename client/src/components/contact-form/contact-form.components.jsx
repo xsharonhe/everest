@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
+
 import Button from '../button/button.component'
 import { withRouter } from 'react-router-dom';
 import { createSubscriptionPage } from '../../firebase/firebase.utils'
@@ -17,11 +18,7 @@ class ContactForm extends React.Component {
         event.preventDefault();
 
         if (this.state.email) {
-            axios.get(`/api/memberAdd`, {
-                params: {
-                    email: this.state.email
-                }
-            })
+            fetch(`/api/memberAdd?email=${ this.state.email }`)
             .then(res => res.json())
             .then(res => console.log(res))
             .catch(err => console.log(err))
@@ -58,9 +55,7 @@ class ContactForm extends React.Component {
                         value={ this.state.email }
                         required/>
                         <div className='buttons'>
-                            <Button type='submit' value='Submit-Form' onClick={() => {
-                                     history.push('/thankyou')
-                                 }}> Submit Form </Button>
+                            <Button type='submit' value='Submit-Form'> Submit Form </Button>
                         </div> 
                 </form> 
             </div>
