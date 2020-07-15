@@ -1,9 +1,27 @@
 .sign-up {
+    width: 400px;
     display: flex;
-    flex-direction: column; 
-    width: 380px;
+    flex-direction: column;
+    padding: 30px 30px 30px 30px;
+    border: 2px solid black;
+    background-color: #f7f7ee;
+    margin: auto;
 
-    .title {
-        margin: 10px 0;
+    h2, span {
+        color: black;
+        font-weight: 800px;
+        text-align: center;
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sign-in {
+        width: 58vw;
+        display: flex;
     }
 }

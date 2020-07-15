@@ -1,0 +1,25 @@
+.no-account {
+    border: 2px solid black;
+    height: 180px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f7f7ee;
+    margin-top: 80px;
+
+    h2, span {
+        color: black;
+    }
+
+    .buttons {
+        display: flex;
+        margin-top: 20px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .no-account {
+        width: 60vw;
+        height: 200px;
+    }
+}
