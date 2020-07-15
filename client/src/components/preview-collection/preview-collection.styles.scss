@@ -12,5 +12,14 @@
       display: flex;
       justify-content: space-between;
     }
+
+    .collections-header {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .collections-button {
+      margin-top: 30px;
+    }
   }
   
