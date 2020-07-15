@@ -17,7 +17,11 @@ class ContactForm extends React.Component {
         event.preventDefault();
 
         if (this.state.email) {
-            fetch(`/api/memberAdd?email=${ this.state.email }`)
+            axios.get(`/api/memberAdd`, {
+                params: {
+                    email: this.state.email
+                }
+            })
             .then(res => res.json())
             .then(res => console.log(res))
             .catch(err => console.log(err))
@@ -54,7 +58,9 @@ class ContactForm extends React.Component {
                         value={ this.state.email }
                         required/>
                         <div className='buttons'>
-                            <Button type='submit' value='Submit-Form'> Submit Form </Button>
+                            <Button type='submit' value='Submit-Form' onClick={() => {
+                                     history.push('/thankyou')
+                                 }}> Submit Form </Button>
                         </div> 
                 </form> 
             </div>
