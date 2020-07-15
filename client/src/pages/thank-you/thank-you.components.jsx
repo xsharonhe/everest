@@ -8,8 +8,9 @@ const ThanksPage = ({ history }) => (
     <div className='container'>
         <div className='success'>
             <h1> You're in! </h1>
-            <p> Thank you for signing up with us to receive updates on our latest gear. We love having as part of the everest family.
-             Expect updates from us soon!</p>
+            <p> On behalf of the Everest family, thank you for signing up with us to receive updates on our latest gear. 
+                We love having as part of the everest family.
+                Expect updates from us soon! In the mean time, feel free to check out the products we already have!</p>
         </div>
         <div className='button'>
             <Button onClick={() => {
